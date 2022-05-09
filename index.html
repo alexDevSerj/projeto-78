@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <title>Document</title>
+</head>
+<body>
+  <h1>meu álbum de familia</h1>
+  <img id="familyMemberImage" src="amanda.jpeg">
+  <style="width: 30%;></style>
+  <h4 id="familyMemberName">amanda</h4>
+  <button onclick="update()">proximo</button>
+  <script>
+    var nomes = ["amanda","tiago","alex","vanessa"]
+  var imagens = ["amanda.jpeg","tiago.jpeg","alex.jpeg","vanessa.jpeg"]
+  //update()
+  var i = 0;
+  function update()
+  {
+    i++;
+    var nunbersOfFamilymenberInArray = 4
+    if(i > nunbersOfFamilymenberInArray )
+    {
+      i = 0
+    }
+      var updatedImage = imagens[i];
+      var updatedName = nomes[i];
+      console.log(updatedName+' - '+updatedImage)
+    document.getElementById("familyMemberImage").src = updatedImage;
+    document.getElementById("familyMemberName").innerHTML = updatedName
+  }
+  </script>
+  
+</body>
+</html>
